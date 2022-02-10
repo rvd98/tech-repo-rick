@@ -1,0 +1,23 @@
+{
+  "name": "redesigned-octo-meme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rvd98/redesigned-octo-meme.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rvd98/redesigned-octo-meme/issues"
+  },
+  "homepage": "https://github.com/rvd98/redesigned-octo-meme#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
