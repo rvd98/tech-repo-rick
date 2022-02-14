@@ -1,7 +1,7 @@
 # tech-repo-rick
-* Links
+* Introduction
 * Purpose & general info
 * Installation
-* Release history
 * Contributing
-* Licentie
+* Code of conduct
+* License
