@@ -1,23 +1,28 @@
 {
-  "name": "redesigned-octo-meme",
+  "name": "tech-repo-rick",
   "version": "1.0.0",
-  "description": "",
+  "description": "* Introduction * Purpose & general info * Installation * Contributing * Code of conduct * License",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx nodemon server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rvd98/redesigned-octo-meme.git"
+    "url": "git+https://github.com/rvd98/tech-repo-rick.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rvd98/redesigned-octo-meme/issues"
+    "url": "https://github.com/rvd98/tech-repo-rick/issues"
   },
-  "homepage": "https://github.com/rvd98/redesigned-octo-meme#readme",
+  "homepage": "https://github.com/rvd98/tech-repo-rick#readme",
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.10.0",
+    "nodemon": "^2.0.15"
   }
 }
