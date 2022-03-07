@@ -22,4 +22,4 @@ app.get('/liked', (req, res) => {
   res.render('liked');
 });
 
-app.listen(8080);
+app.listen(3000);
