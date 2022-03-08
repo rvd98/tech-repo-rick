@@ -12,7 +12,7 @@ Follow the following steps to install:
 1. Clone this GitHub repository locally:
 
 ```
-  git clone <https://github.com/rvd98/tech-repo-rick.git>
+  git clone https://github.com/rvd98/tech-repo-rick.git
 ```
 
 2. Install the required NPM packages:
