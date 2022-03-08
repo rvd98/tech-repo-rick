@@ -4,8 +4,9 @@
   "description": "* Introduction * Purpose & general info * Installation * Contributing * Code of conduct * License",
   "main": "index.js",
   "scripts": {
-    "start": "npx nodemon server.js",
-    "scss": "node-sass --watch scss/app.scss -o public/style --output-style compressed"
+    "start": "node server.js",
+    "scss": "sass --watch scss:public/style",
+    "dev": "nodemon server.js & npm run scss"
   },
   "repository": {
     "type": "git",
@@ -21,12 +22,11 @@
   "dependencies": {
     "body-parser": "^1.19.2",
     "express": "^4.17.2",
-    "express-handlebars": "^6.0.2",
-    "node-sass": "^7.0.1",
-    "sass": "^1.49.9"
+    "express-handlebars": "^6.0.2"
   },
   "devDependencies": {
     "eslint": "^8.10.0",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "sass": "^1.49.9"
   }
 }
