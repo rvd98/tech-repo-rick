@@ -15,10 +15,7 @@ https://css-tricks.com/an-interview-with-elad-shechter-on-the-new-css-reset/***/
   box-sizing: border-box;
 }
 
-/*
-  Remove list styles (bullets/numbers)
-  in case you use it with normalize.css
-*/
+/* Remove list styles (bullets/numbers) in case you use it with normalize.css */
 ol, ul {
   list-style: none;
 }

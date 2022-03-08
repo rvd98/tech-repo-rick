@@ -21,8 +21,10 @@
   "homepage": "https://github.com/rvd98/tech-repo-rick#readme",
   "dependencies": {
     "body-parser": "^1.19.2",
+    "dotenv": "^16.0.0",
     "express": "^4.17.2",
-    "express-handlebars": "^6.0.2"
+    "express-handlebars": "^6.0.2",
+    "mongoose": "^6.2.4"
   },
   "devDependencies": {
     "eslint": "^8.10.0",
