@@ -6,6 +6,7 @@
 main {
   height: calc(100% - 8em);
   padding-top: 1em;
+  text-align: center;
 
   >section {
     display: flex;
@@ -28,7 +29,7 @@ main {
     }
   }
 
-/*########## cards ########## */
+/*########## home cards ########## */
   .container {
     display: flex;
     justify-content: center;
