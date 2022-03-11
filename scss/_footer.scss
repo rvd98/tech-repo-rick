@@ -1,0 +1,43 @@
+footer {
+  background-color: black;
+  color: white;
+  height: 4em;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+
+
+  nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    .home {
+      grid-column: 2 / 3;
+      justify-self: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 4em;
+      height: 4em;
+
+      img {
+        width:1.8em;
+      }
+    }
+
+    .liked {
+      grid-column: 3 / 4;
+      justify-self: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 4em;
+      height: 4em;
+
+      img {
+        width: 2.4em;
+      }
+    }
+  }
+}

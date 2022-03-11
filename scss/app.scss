@@ -1,46 +1,108 @@
+@import "_css-reset.scss";
 @import "_header.scss";
 @import "_footer.scss";
 @import "_font.scss";
 
-/*** Shechter, E. (2022, February 27). An Interview With Elad Shechter 
-on “The New CSS Reset.” CSS-Tricks. Retrieved March 7, 2022, from 
-https://css-tricks.com/an-interview-with-elad-shechter-on-the-new-css-reset/***/
+main {
+  height: calc(100% - 8em);
+  padding-top: 1em;
 
-/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
-*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
-  all: unset;
-  display: revert;
-}
+  >section {
+    display: flex;
+    justify-content: flex-end;
 
-/* Preferred box-sizing value */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Remove list styles (bullets/numbers) in case you use it with normalize.css */
-ol, ul {
-  list-style: none;
-}
-
-/* For images to not be able to exceed their container */
-img {
-  max-width: 100%;
-}
-
-/* Removes spacing between cells in tables */
-table {
-  border-collapse: collapse;
-}
-
-/* Revert the 'white-space' property for textarea elements on Safari */
-textarea {
-  white-space: revert;
-}
+    .filter {
+      width: 3em;
+      height: 3em;
+      background-color: black;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 1.5em;
 
 
-body {
-  margin: 0;
-  padding: 0;
+      img {
+        width: 1.5em;
+      }
+    }
+  }
+
+/*########## cards ########## */
+  .container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5em;
+
+    li {
+      width: 17em;
+      height: 19.5em;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr 4em;
+      background-color: #ebebeb;
+      border-radius: .4em;
+      
+
+      h2 {
+        grid-column: span 2;
+        grid-row: 2 / 3;
+        justify-self: center;
+        align-self: center;
+
+      }
+
+      h3 {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+        justify-self: center;
+        align-self: center;
+      }
+
+      img {
+        width: 14em;
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+        justify-self: center;
+        align-self: end;
+      }
+    }
+  }
+
+  form {
+    section {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      margin-top: 2em;
+  
+      .dislike {
+        width: 4em;
+        height: 4em;
+        background-color: black;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+        img {
+          width: 1.8em;
+        }
+      }
+  
+      .like {
+        width: 4em;
+        height: 4em;
+        background-color: black;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+        img {
+          width: 2.4em;
+        }
+      }
+    }
+  }
 }

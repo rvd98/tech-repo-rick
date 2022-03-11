@@ -1,0 +1,123 @@
+@charset "UTF-8";
+header {
+  height: 4em;
+}
+
+header section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 0.5em;
+}
+
+header section h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2.6em;
+}
+
+header section h1 span img {
+  width: .9em;
+}
+
+header h1 {
+  font-family: 'Creepster', cursive;
+}
+
+main, footer {
+  font-family: 'Roboto', sans-serif;
+}
+
+/*** Shechter, E. (2022, February 27). An Interview With Elad Shechter 
+on “The New CSS Reset.” CSS-Tricks. Retrieved March 7, 2022, from 
+https://css-tricks.com/an-interview-with-elad-shechter-on-the-new-css-reset/***/
+/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove list styles (bullets/numbers) in case you use it with normalize.css */
+ol, ul {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-width: 100%;
+}
+
+/* Removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main button {
+  width: 3em;
+  height: 3em;
+  background-color: black;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main button .filter {
+  width: 1.5em;
+}
+
+main section:nth-of-type(2) button {
+  width: 3em;
+  height: 3em;
+  background-color: black;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main section:nth-of-type(2) button .dislike {
+  width: 1.5em;
+}
+
+main section:nth-of-type(2) button .like {
+  width: 1.9em;
+}
+/*# sourceMappingURL=app.css.map */
