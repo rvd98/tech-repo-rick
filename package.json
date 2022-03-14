@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "scss": "sass --watch scss:public/style",
-    "dev": "nodemon server.js & npm run scss"
+    "dev": "nodemon -e hbs,scss,css,js server.js & npm run scss"
   },
   "repository": {
     "type": "git",

@@ -145,7 +145,13 @@ main .container li {
   z-index: 999;
 }
 main .container li h2 {
-  grid-column: span 2;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  justify-self: center;
+  align-self: center;
+}
+main .container li p {
+  grid-column: 2/3;
   grid-row: 2/3;
   justify-self: center;
   align-self: center;
@@ -195,6 +201,24 @@ main form section .like {
 }
 main form section .like img {
   width: 2.4em;
+}
+main > h2 {
+  margin-bottom: 1em;
+}
+main .liked-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+main .liked-list li {
+  background-color: #dddddd;
+  width: 10em;
+  border-radius: 0.5em;
+  padding: 1em;
+}
+main .liked-list li img {
+  width: 8em;
+  margin-bottom: 0.5em;
 }
 
 /*# sourceMappingURL=app.css.map */
