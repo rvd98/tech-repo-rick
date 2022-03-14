@@ -27,4 +27,8 @@ app.get('/liked', (req, res) => {
   res.render('liked');
 });
 
+app.post('/like', (req, res) => {
+  console.log("iets");
+});
+
 app.listen(port);
