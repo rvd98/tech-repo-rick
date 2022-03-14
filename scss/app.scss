@@ -8,34 +8,34 @@ main {
   padding-top: 1em;
   text-align: center;
 
-  >section {
+  .filter {
+    width: 3em;
+    height: 3em;
+    background-color: black;
+    border-radius: 50%;
     display: flex;
-    justify-content: flex-end;
-
-    .filter {
-      width: 3em;
-      height: 3em;
-      background-color: black;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-right: 1.5em;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.5em;
 
 
-      img {
-        width: 1.5em;
-      }
+    img {
+      width: 1.5em;
     }
   }
 
-/*########## home cards ########## */
+  /*########## home cards ########## */
   .container {
     display: flex;
     justify-content: center;
-    margin-top: 1.5em;
+    position: relative;
+    top: 50%;
 
     li {
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      transform: translate(-50%, -75%);
       width: 17em;
       height: 19.5em;
       display: grid;
@@ -43,7 +43,7 @@ main {
       grid-template-rows: 1fr 4em;
       background-color: #dddddd;
       border-radius: .4em;
-      
+      z-index: 999;
 
       h2 {
         grid-column: span 2;
@@ -71,6 +71,8 @@ main {
   }
 
   form {
+    margin-top: 25em;
+
     section {
       display: flex;
       flex-flow: row nowrap;

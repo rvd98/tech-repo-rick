@@ -111,11 +111,7 @@ main {
   text-align: center;
   /*########## home cards ########## */
 }
-main > section {
-  display: flex;
-  justify-content: flex-end;
-}
-main > section .filter {
+main .filter {
   width: 3em;
   height: 3em;
   background-color: black;
@@ -125,15 +121,20 @@ main > section .filter {
   align-items: center;
   margin-right: 1.5em;
 }
-main > section .filter img {
+main .filter img {
   width: 1.5em;
 }
 main .container {
   display: flex;
   justify-content: center;
-  margin-top: 1.5em;
+  position: relative;
+  top: 50%;
 }
 main .container li {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -75%);
   width: 17em;
   height: 19.5em;
   display: grid;
@@ -141,6 +142,7 @@ main .container li {
   grid-template-rows: 1fr 4em;
   background-color: #dddddd;
   border-radius: 0.4em;
+  z-index: 999;
 }
 main .container li h2 {
   grid-column: span 2;
@@ -160,6 +162,9 @@ main .container li img {
   grid-row: 1/2;
   justify-self: center;
   align-self: end;
+}
+main form {
+  margin-top: 25em;
 }
 main form section {
   display: flex;
