@@ -128,57 +128,55 @@ main .container {
   display: flex;
   justify-content: center;
   position: relative;
-  top: 50%;
+  top: 15em;
 }
 main .container li {
   position: absolute;
-  top: 25%;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -75%);
-  width: 17em;
-  height: 19.5em;
+  transform: translate(-50%, -50%);
+}
+main .container li .card {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr 4em;
+  width: 17em;
+  height: 19.5em;
   background-color: #dddddd;
   border-radius: 0.4em;
-  z-index: 999;
 }
-main .container li h2 {
+main .container li .card h2 {
   grid-column: 1/2;
   grid-row: 2/3;
   justify-self: center;
   align-self: center;
 }
-main .container li p {
+main .container li .card p {
   grid-column: 2/3;
   grid-row: 2/3;
   justify-self: center;
   align-self: center;
 }
-main .container li h3 {
+main .container li .card h3 {
   grid-column: 3/4;
   grid-row: 2/3;
   justify-self: center;
   align-self: center;
 }
-main .container li img {
+main .container li .card img {
   width: 14em;
   grid-column: 1/4;
   grid-row: 1/2;
   justify-self: center;
   align-self: end;
 }
-main form {
-  margin-top: 25em;
-}
-main form section {
+main .container li .buttons {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
-  margin-top: 2em;
+  margin-top: 3em;
 }
-main form section .dislike {
+main .container li .buttons form:nth-of-type(1) .dislike {
   width: 4em;
   height: 4em;
   background-color: black;
@@ -187,10 +185,13 @@ main form section .dislike {
   justify-content: center;
   align-items: center;
 }
-main form section .dislike img {
+main .container li .buttons form:nth-of-type(1) .dislike img {
   width: 1.8em;
 }
-main form section .like {
+main .container li .buttons form:nth-of-type(2) .hidden {
+  display: none;
+}
+main .container li .buttons form:nth-of-type(2) .like {
   width: 4em;
   height: 4em;
   background-color: black;
@@ -199,7 +200,7 @@ main form section .like {
   justify-content: center;
   align-items: center;
 }
-main form section .like img {
+main .container li .buttons form:nth-of-type(2) .like img {
   width: 2.4em;
 }
 main > h2 {

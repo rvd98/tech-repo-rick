@@ -1,33 +1,38 @@
 <main>
-{{#each boardData}}
-    Key: {{@key}} Value = {{this}}
-   {{#each this }}
-      Key: {{@key}} Value = {{this}}
-   {{/each}}
-{{/each}}
   <ul class="container">
-    <li>
-      <h2>Name</h2>
-      <p>Creator</p>
-      <h3>Price</h3>
-      <img src="/static/images/complete_sb.png" alt="Name">
-    </li>
-    <li>
-      <h2>Name</h2>
-      <p>creator</p>
-      <h3>Price</h3>
-      <img src="/static/images/complete_sb.png" alt="Name">
-    </li>
+    {{#each cards}}
+      <li id="card-{{this.id}}">
+        <section class="card">
+          <h2>{{this.name}}</h2>
+          <p>{{this.creator}}</p>
+          <h3>{{this.price}}</h3>
+          <img src="/static/images/{{this.imgName}}" alt="Skateboard">
+        </section>
+        <section class="buttons">
+          <form action="/dislike" method="post">
+            <button class="dislike">
+              <img src="/static/images/dislike_white.png" alt="dislike button">
+            </button>
+          </form>
+          <form id="{{this.id}}">
+            <input class="hidden" name="id" value="{{this.id}}">
+            <input class="hidden" name="name" value="{{this.name}}">
+            <input class="hidden" name="creator" value="{{this.creator}}">
+            <input class="hidden" name="price" value="{{this.price}}">
+            <button type="button" class="like" onclick="submitLike(event, {{this.id}})">
+              <img src="/static/images/like_white.png" alt="like button">
+            </button>
+          </form>
+        </section>
+      </li>
+    {{/each}}
   </ul>
-
-  <form action="/like" method="post">
-    <section>
-      <button class="dislike">
-        <img src="/static/images/dislike_white.png" alt="dislike button">
-      </button>
-      <button class="like">
-        <img src="/static/images/like_white.png" alt="like button">
-      </button>
-    </section>
-  </form>
 </main>
+
+{{!-- bron script: https://stackoverflow.com/questions/46640024/how-do-i-post-form-data-with-fetch-api --}}
+<script>
+function submitLike(event, formId) {
+  event.preventDefault();
+  const params = new URLSearchParams([...new FormData(formId).entries()]);
+  fetch("/like?" + params.toString(), { method: "POST" });
+</script>
